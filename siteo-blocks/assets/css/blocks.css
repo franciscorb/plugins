@@ -1,0 +1,180 @@
+/****DIAPORAMA SLIDER*****/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+/*--------------------------------------------------------------
+# Hero banner Section
+--------------------------------------------------------------*/
+.hero .carousel-indicators {
+  right: 0;
+  bottom: 10px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+}
+
+.hero .carousel-indicators li a {
+  background-color: #fff;
+}
+
+.hero .carousel-indicators li.active {
+  background-color: orange;
+}
+
+.hero {
+    width: 100%;
+    height: 85vh;
+    background-color: rgba(4, 12, 21, 0.8);
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .hero svg.top {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+  }
+  
+  .hero .carousel, .hero .carousel-inner, .hero .carousel-item, .hero .carousel-item::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .hero .img {
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+  }
+  
+  .hero .carousel-item::before {
+    content: '';
+    background-color: rgba(4, 12, 21, 0.3);
+  }
+  
+  .hero .carousel-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    bottom: 0;
+    top: 82px;
+    left: 50px;
+    right: 50px;
+  }
+  
+  .hero h1 {
+    color:#fff;
+    margin: 0;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    font-size: 60px;
+  }
+  
+  .hero p {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    color: #fff;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  
+  .hero .carousel-inner .carousel-item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    background-position: center top;
+  }
+  
+  .hero .carousel-inner .carousel-item,
+  .hero .carousel-inner .active.carousel-item-left,
+  .hero .carousel-inner .active.carousel-item-right {
+    opacity: 0;
+  }
+  
+  .hero .carousel-inner .active,
+  .hero .carousel-inner .carousel-item-next.carousel-item-left,
+  .hero .carousel-inner .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  
+  .hero .carousel-inner .carousel-item-next,
+  .hero .carousel-inner .carousel-item-prev,
+  .hero .carousel-inner .active.carousel-item-left,
+  .hero .carousel-inner .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  
+  .hero .carousel-control-prev, .hero .carousel-control-next {
+    background-color: transparent;
+    bottom:10px;
+    top:unset;
+  }
+
+  .hero .carousel-control-prev{
+    left: 20px;
+  }
+  .hero .carousel-control-next{
+    right: unset;
+    left: 80px;
+  }
+  
+  .hero .carousel-control-next-icon, .hero .carousel-control-prev-icon {
+    background: none;
+    font-size: 30px;
+    line-height: 1;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: rgba(255, 255, 255, 0.5);
+    z-index: 3;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .hero .carousel-control-next-icon:hover, .hero .carousel-control-prev-icon:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .hero .carousel-indicators li {
+    cursor: pointer;
+    overflow: hidden;
+    border: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    opacity: .6;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  
+  .hero .carousel-indicators li.active {
+    opacity: 1;
+  }
+  
+  .hero .btn-get-started {
+    letter-spacing: 1px;
+    display: inline-block;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    line-height: 1;
+    color: #fff;
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+    margin-top: 15px;
+  }
+  
+  .hero .btn-get-started:hover {
+    font-weight: 200;
+  }
+
+  
